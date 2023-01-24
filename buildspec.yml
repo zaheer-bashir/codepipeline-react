@@ -4,7 +4,7 @@ phases:
   install:
      commands:
         - echo Installing node 18...
-        - curl -fsSL https://deb.nodesource.com/setup_lts.x | -E bash - 
+        - curl -fsSL https://deb.nodesource.com/setup_lts.x | -E bash - &&\
         - apt install -y nodejs
         - echo Installing Yarn...
         - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
@@ -24,4 +24,4 @@ artifcats:
   files:
      - "**/*"
   discard-paths: no
-  base-directory: dist
+  base-directory: build
